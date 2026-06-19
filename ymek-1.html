@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>株式会社YMEK | Expanding Possibilities from Garden to Space</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#cae9e0",
+                        "inverse-on-surface": "#f3f0f2",
+                        "on-error-container": "#93000a",
+                        "background": "#fcf8fa",
+                        "on-primary-fixed": "#131b2e",
+                        "surface-tint": "#565e74",
+                        "secondary-container": "#c7e6dd",
+                        "outline": "#76777d",
+                        "tertiary": "#000000",
+                        "on-secondary-fixed": "#02201b",
+                        "tertiary-fixed": "#e0e3e5",
+                        "surface-container": "#f0edef",
+                        "secondary": "#48645d",
+                        "on-secondary-container": "#4c6861",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#bec6e0",
+                        "error": "#ba1a1a",
+                        "primary": "#000000",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "tertiary-container": "#191c1e",
+                        "primary-container": "#131b2e",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#dcd9db",
+                        "secondary-fixed-dim": "#aecdc4",
+                        "surface-variant": "#e4e2e4",
+                        "surface-container-highest": "#e4e2e4",
+                        "on-surface-variant": "#45464d",
+                        "on-tertiary-container": "#818486",
+                        "primary-fixed": "#dae2fd",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "on-background": "#1b1b1d",
+                        "surface-container-low": "#f6f3f5",
+                        "outline-variant": "#c6c6cd",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-primary-container": "#7c839b",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#eae7e9",
+                        "on-surface": "#1b1b1d",
+                        "surface": "#fcf8fa",
+                        "inverse-surface": "#303032",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#191c1e",
+                        "surface-bright": "#fcf8fa",
+                        "on-secondary-fixed-variant": "#304c46"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "32px",
+                        "section-gap": "120px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "headline-md": ["Hanken Grotesk", "sans-serif"],
+                        "label-caps": ["JetBrains Mono", "monospace"],
+                        "headline-sm": ["Hanken Grotesk", "sans-serif"],
+                        "display-lg-mobile": ["Hanken Grotesk", "sans-serif"],
+                        "display-lg": ["Hanken Grotesk", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #fcf8fa; }
+        .glass-nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .hero-gradient { background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%); }
+        .luxury-shadow { box-shadow: 0 20px 40px -15px rgba(19, 27, 46, 0.1); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-background">
+<!-- TopAppBar -->
+<header class="bg-surface/80 backdrop-blur-md dark:bg-background/80 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full z-50 docked full-width top-0 sticky transition-all duration-300">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary hover:opacity-70 cursor-pointer transition-opacity">menu</span>
+<h1 class="font-display-lg-mobile text-display-lg-mobile font-bold tracking-tighter text-primary">YMEK</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-primary font-bold hover:opacity-70 transition-opacity" href="#">Overview</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:opacity-70 transition-opacity" href="#">Cruiser Charter</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:opacity-70 transition-opacity" href="#">Investment</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:opacity-70 transition-opacity" href="#">Company</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary hover:opacity-70 cursor-pointer transition-opacity">account_circle</span>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen min-h-[700px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A cinematic, high-contrast photograph of a sleek, modern luxury cruiser docked at an urban marina during the blue hour. The skyline of a futuristic city glows in the background with obsidian navy and estate green reflections dancing on the water surface. The lighting is sophisticated, emphasizing the sharp, architectural lines of the vessel and the clean, minimalist luxury of the environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC40zmfSD0Pj5zIP2fO0B-8RgilneS40y3JCXl3xghdD6GNQZz76eYLOSkirT6nNirCeYhexiJS5U6o2T-sLaPuY8MH4zDxaJzFCG-I3HbZ0R26aZtltZU_xIcHrdXRqlCnsWis5w79Q-YqpRgcisapaW8wpiqBD1JF71_hy03qy4QRLZcZvhIuyTyYEzhedk7Mn6kK30I6jmegLLl5Ah__xcvC36E4zjrl-qhnb13ZS4QSkdFJoC4upqlJMiPAKaECPfoFRgKYcLsa')"></div>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="max-w-3xl">
+<p class="font-label-caps text-label-caps text-secondary-container mb-4 tracking-[0.2em]">YMEK CO., LTD.</p>
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-6">
+                        Expanding Possibilities from Garden to Space.
+                    </h2>
+<p class="font-body-lg text-body-lg text-surface-variant mb-10 max-w-xl">
+                        特許技術パラソルから、世界の未来を創る投資まで。<br/>
+                        株式会社YMEKは、最先端のモビリティ、グローバル投資、そしてメディアを通じて、新しいライフスタイルを定義します。
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-white px-8 py-4 font-label-caps text-label-caps rounded-none hover:bg-on-secondary-fixed-variant transition-all duration-300 scale-100 active:scale-95 uppercase">
+                            Cruiser Charter
+                        </button>
+<button class="border border-white text-white px-8 py-4 font-label-caps text-label-caps rounded-none hover:bg-white/10 backdrop-blur-sm transition-all duration-300 scale-100 active:scale-95 uppercase">
+                            Company Profile
+                        </button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-white opacity-50">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- Ranking Section -->
+<section class="bg-surface-container-lowest py-16 overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row items-center justify-between gap-8 border-y border-outline-variant py-8">
+<div class="flex items-center gap-6">
+<span class="text-primary font-display-lg-mobile font-bold">#1</span>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">Market Leader</p>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">楽天市場パラソル部門第1位獲得</h3>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md italic">
+                        "革新的な特許技術と洗練されたデザインが融合。日本国内で最も支持される最高級パラソルとしての地位を確立しました。"
+                    </p>
+</div>
+</div>
+</section>
+<!-- Business Segments (Bento Grid) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-4">OUR VERTICALS</p>
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-primary">Business Segments</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+                    私たちは、物理的なプロダクトから、デジタルメディア、そして最先端宇宙開発への投資まで、多角的なポートフォリオを展開しています。
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Segment 1: Lifestyle & Mobility -->
+<div class="md:col-span-8 group relative overflow-hidden h-[500px] bg-surface-container luxury-shadow">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A minimalist architectural shot of a high-end patio featuring the YMEK patented luxury parasol. The setting is a clean, white terrace overlooking a calm ocean. The sunlight is sharp, creating dramatic high-contrast shadows. The styling is minimalist, corporate, and premium with a palette of whites, slates, and charcoal." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPWdkc-g48XjaSLbjJAzSFgapfeK10gSnTT57DnZ6np2_VZGGhEsZhgMS9CY2aV8Ih5ADkXUxbTG4PoFQdzJAJ8Z39AA8YiDaZBNOTDrXG6ZvTun6_G7ZCNXYOPhVON_kVtAyPqGGUpfHCczd2bzJ_J-nwwaflaV9FcEXps2BlGCdmLHRSn_LvVcPtmsDpXRGwIva_EcA6JWPDAdv-v2FhQQpxPRu2EUsgt-fWnh3KWbfefefZax_OJ-mYGQFHVh4lbaLkrwPeN61y')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10 w-full">
+<span class="font-label-caps text-label-caps text-secondary-fixed mb-2 block">LIFESTYLE &amp; MOBILITY</span>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Patented Parasols &amp; Cruiser Interiors</h3>
+<p class="font-body-md text-body-md text-surface-variant mb-6 max-w-lg">
+                            特許取得済みの独自の構造を持つ高級パラソルと、世界水準のクルーザー内装デザイン。機能性と審美性を極限まで追求したプロダクト群。
+                        </p>
+<a class="inline-flex items-center gap-2 text-white font-label-caps text-label-caps hover:gap-4 transition-all" href="#">
+                            EXPLORE DETAILS <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Segment 2: Content Media -->
+<div class="md:col-span-4 group relative overflow-hidden h-[500px] bg-primary luxury-shadow">
+<div class="p-10 h-full flex flex-col justify-between relative z-10">
+<div>
+<span class="font-label-caps text-label-caps text-outline-variant mb-2 block">CONTENT MEDIA</span>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Car and Cruiser Channel</h3>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4 text-white/60">
+<span class="material-symbols-outlined text-4xl">play_circle</span>
+<p class="font-body-md text-body-md">YouTube official channel</p>
+</div>
+<p class="font-body-md text-body-md text-surface-variant">
+                                モビリティとラグジュアリーの最前線を発信する、日本最大級のクルーザー専門メディア。
+                            </p>
+</div>
+</div>
+<!-- Subtle pattern or abstract background -->
+<div class="absolute top-0 right-0 p-10 opacity-10">
+<span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'FILL' 1;">directions_boat</span>
+</div>
+</div>
+<!-- Segment 3: Global Investment -->
+<div class="md:col-span-12 group relative overflow-hidden h-[400px] bg-surface-container-high luxury-shadow">
+<div class="flex flex-col md:flex-row h-full">
+<div class="md:w-1/2 p-10 flex flex-col justify-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">GLOBAL INVESTMENT</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Investing in Future Giants</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                                SpaceXやOpenAIをはじめとする、世界を変えるユニコーン企業への戦略的投資。私たちは日本の資本を通じて、人類の進歩に貢献します。
+                            </p>
+<div class="flex gap-8">
+<div class="border-l-2 border-primary pl-4">
+<p class="font-label-caps text-label-caps text-outline">PORTFOLIO</p>
+<p class="font-headline-sm text-headline-sm">SpaceX</p>
+</div>
+<div class="border-l-2 border-primary pl-4">
+<p class="font-label-caps text-label-caps text-outline">PORTFOLIO</p>
+<p class="font-headline-sm text-headline-sm">OpenAI</p>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700" data-alt="A sleek, high-tech corporate office interior with a glass wall overlooking a modern cityscape at night. In the foreground, a minimalist table holds high-end tech devices. The atmosphere is quiet, focused, and powerful, rendered in obsidian navy and estate green with glowing technological accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCmrzEF2cMVS2MAWhP8T09GWANwiO-OHHu06mu4BIItaj7h4cV1ZEw9c-TUe2t1QQqb8D5D7MmQEV27Exd3P1Wpc1t4jslvE7iVE0tGFPKWkQcVPfy2p8cu6xxZrhy16EyazYJ46OQrS7HqUYDUFXY7Z_LOoDQUFhefS0eoegJ9liB_fyhFyHssZDo_A-UWUF8Bj8Y6iDKNOWDA-kHHfZLk8MODvVlVnLqhm8I7XeaphifmYJNaYvjojLdul8zlcyf_2O6mFjYJfZjt')"></div>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="py-section-gap bg-primary text-white text-center">
+<div class="max-w-2xl mx-auto px-margin-mobile">
+<h2 class="font-display-lg-mobile text-display-lg-mobile mb-6">Create the Future with Us.</h2>
+<p class="font-body-lg text-body-lg text-surface-variant mb-10">
+                    最新の投資情報やクルーザーチャーターの予約、プロジェクトに関するお問い合わせはこちらから。
+                </p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<input class="bg-transparent border-b border-white/30 text-white font-body-md p-4 w-full md:w-80 focus:outline-none focus:border-white transition-colors" placeholder="Your corporate email" type="email"/>
+<button class="bg-white text-primary px-10 py-4 font-label-caps text-label-caps hover:bg-secondary-fixed transition-colors">
+                        CONTACT NOW
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-high py-section-gap w-full flex flex-col items-center text-center px-margin-mobile">
+<div class="mb-10">
+<h2 class="font-headline-sm text-headline-sm font-bold text-primary mb-4">YMEK Co., Ltd.</h2>
+<div class="flex gap-6 justify-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">IP Portfolio</a>
+</div>
+</div>
+<div class="w-full max-w-container-max border-t border-outline-variant pt-10">
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 YMEK Co., Ltd. All Rights Reserved.</p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-4 bg-surface-container-lowest border-t border-outline-variant">
+<div class="flex flex-col items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-caps text-[10px] mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">anchor</span>
+<span class="font-label-caps text-[10px] mt-1">Cruiser</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">rocket_launch</span>
+<span class="font-label-caps text-[10px] mt-1">Tech</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">info</span>
+<span class="font-label-caps text-[10px] mt-1">Profile</span>
+</div>
+</nav>
+<script>
+        // Micro-interaction for scroll effects
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md', 'bg-white/95');
+            } else {
+                header.classList.remove('shadow-md', 'bg-white/95');
+            }
+        });
+
+        // Hover effect for image containers
+        document.querySelectorAll('.group').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                const img = el.querySelector('div[style*="background-image"]');
+                if (img) img.style.transform = 'scale(1.05)';
+            });
+            el.addEventListener('mouseleave', () => {
+                const img = el.querySelector('div[style*="background-image"]');
+                if (img) img.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body></html>

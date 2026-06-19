@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        input:focus + label,
+        input:not(:placeholder-shown) + label,
+        textarea:focus + label,
+        textarea:not(:placeholder-shown) + label {
+            transform: translateY(-24px) scale(0.85);
+            color: #b4945c;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "surface-bright": "#f9f9ff",
+                    "inverse-surface": "#263143",
+                    "on-tertiary-container": "#828489",
+                    "outline-variant": "#c6c6cd",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed-variant": "#5b4312",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#d8e3fb",
+                    "on-primary-container": "#7c839b",
+                    "surface-container-low": "#f0f3ff",
+                    "on-tertiary-fixed": "#191c20",
+                    "secondary-fixed": "#ffdea8",
+                    "on-background": "#111c2d",
+                    "primary": "#000000",
+                    "on-secondary-container": "#785d2a",
+                    "platinum-divider": "#e2e8f0",
+                    "surface-container-highest": "#d8e3fb",
+                    "tertiary": "#000000",
+                    "secondary-container": "#fdd89a",
+                    "on-primary-fixed": "#131b2e",
+                    "inverse-on-surface": "#ecf1ff",
+                    "primary-fixed-dim": "#bec6e0",
+                    "secondary-fixed-dim": "#e5c185",
+                    "tertiary-fixed-dim": "#c5c6cc",
+                    "surface-dim": "#cfdaf2",
+                    "tertiary-container": "#191c20",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#dae2fd",
+                    "on-secondary-fixed": "#271900",
+                    "on-surface-variant": "#45464d",
+                    "charcoal-muted": "#334155",
+                    "inverse-primary": "#bec6e0",
+                    "surface-tint": "#565e74",
+                    "surface-container-high": "#dee8ff",
+                    "ice-white": "#f8f9ff",
+                    "metallic-gold": "#b4945c",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#131b2e",
+                    "error": "#ba1a1a",
+                    "secondary": "#755a28",
+                    "surface": "#f9f9ff",
+                    "outline": "#76777d",
+                    "on-surface": "#111c2d",
+                    "on-error": "#ffffff",
+                    "deep-navy": "#0f172a",
+                    "tertiary-fixed": "#e1e2e8",
+                    "background": "#f9f9ff",
+                    "surface-container": "#e7eeff",
+                    "on-tertiary-fixed-variant": "#44474c",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "1.5rem",
+                    "gutter": "2rem",
+                    "margin-page": "4rem",
+                    "section-gap": "8rem",
+                    "stack-unit": "0.5rem"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.8", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.7", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.2em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-ice-white text-deep-navy font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-ice-white dark:bg-deep-navy border-b border-platinum-divider dark:border-charcoal-muted flex justify-between items-center px-margin-mobile h-16 w-full transition-all duration-300 ease-in-out">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-deep-navy dark:text-ice-white">architecture</span>
+<span class="font-headline-md text-headline-md font-bold tracking-widest text-primary dark:text-ice-white uppercase">Urban Property Solutions</span>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="font-label-caps text-label-caps text-deep-navy dark:text-ice-white hover:opacity-70 transition-opacity" href="#">Home</a>
+<a class="font-label-caps text-label-caps text-deep-navy dark:text-ice-white hover:opacity-70 transition-opacity" href="#">Services</a>
+<a class="font-label-caps text-label-caps text-deep-navy dark:text-ice-white hover:opacity-70 transition-opacity" href="#">Properties</a>
+<a class="font-label-caps text-label-caps text-metallic-gold transition-opacity" href="#">Contact</a>
+</nav>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-deep-navy dark:text-ice-white cursor-pointer hover:opacity-70">menu</span>
+</div>
+</header>
+<main class="pt-16">
+<!-- Hero / Contact Intro -->
+<section class="relative h-[530px] flex items-center justify-center bg-deep-navy overflow-hidden">
+<div class="absolute inset-0 opacity-40 grayscale">
+<img class="w-full h-full object-cover" data-alt="A high-angle architectural photograph of a sleek, modern corporate headquarters at dusk. The building features massive glass facades reflecting a deep indigo sky, with sharp metallic edges creating a sense of rigid precision. The lighting is low-key and dramatic, emphasizing the structure's grandeur and professional authority in a luxury urban setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTLwCqchzxcSc-fHH5fHaU5ppq1UEuAkiTj4BYYGRRlcjKo-cg66pODcaOFGFmbxgPJg3etRg9u9uYnyVvanNvSRPjbniL4qaxLED9DiNgRBrmqpopXvKYpTDfTmOI3OkUBRD3MkBZDAuWk0YxQicaQgZWBIfI3ImC3nUJ7GZT963Tc121bFxakzc5WhySPH11t1Ae6Xs3cAWll5phboU2egtd6HRqcBFSH3FML_YIkApDB0q394H0oJhc3eoXKZmA6FoZX1DqwGc"/>
+</div>
+<div class="relative z-10 text-center px-margin-mobile max-w-4xl">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-ice-white mb-6 uppercase">Expert Guidance</h1>
+<p class="font-body-lg text-body-lg text-ice-white opacity-80 mb-12">アーバン・プロパティ・ソリューションズは、卓越した専門知識と洗練された戦略で、お客様の不動産資産の価値を最大限に高めます。</p>
+<a class="bg-metallic-gold text-deep-navy px-12 py-5 font-label-caps text-label-caps tracking-widest hover:bg-opacity-90 transition-all inline-block" href="#consultant">専門家に相談する</a>
+</div>
+</section>
+<!-- Main Content Area -->
+<div class="max-w-[1280px] mx-auto px-margin-mobile py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Left: Contact Form -->
+<div class="md:col-span-7 space-y-12">
+<div>
+<span class="text-metallic-gold font-label-caps text-label-caps block mb-2">INQUIRY FORM</span>
+<h2 class="font-headline-md text-headline-md border-b border-platinum-divider pb-4">お問い合わせ</h2>
+</div>
+<form class="space-y-10 pt-4">
+<div class="relative group">
+<input class="block w-full bg-transparent border-0 border-b border-deep-navy py-4 px-0 focus:ring-0 focus:border-metallic-gold transition-colors peer text-body-lg" id="name" name="name" placeholder=" " type="text"/>
+<label class="absolute left-0 top-4 text-outline font-label-caps text-label-caps transition-all pointer-events-none origin-left" for="name">お名前 (必須)</label>
+</div>
+<div class="relative group">
+<input class="block w-full bg-transparent border-0 border-b border-deep-navy py-4 px-0 focus:ring-0 focus:border-metallic-gold transition-colors peer text-body-lg" id="email" name="email" placeholder=" " type="email"/>
+<label class="absolute left-0 top-4 text-outline font-label-caps text-label-caps transition-all pointer-events-none origin-left" for="email">メールアドレス (必須)</label>
+</div>
+<div class="relative group">
+<select class="block w-full bg-transparent border-0 border-b border-deep-navy py-4 px-0 focus:ring-0 focus:border-metallic-gold transition-colors text-body-lg appearance-none" id="category" name="category">
+<option disabled="" selected="" value=""></option>
+<option value="property">物件に関するご相談</option>
+<option value="investment">不動産投資・資産運用</option>
+<option value="corporate">法人向けソリューション</option>
+<option value="other">その他</option>
+</select>
+<label class="absolute left-0 top-0 -translate-y-6 scale-85 text-metallic-gold font-label-caps text-label-caps" for="category">お問い合わせ項目</label>
+<span class="material-symbols-outlined absolute right-0 top-4 pointer-events-none">expand_more</span>
+</div>
+<div class="relative group">
+<textarea class="block w-full bg-transparent border-0 border-b border-deep-navy py-4 px-0 focus:ring-0 focus:border-metallic-gold transition-colors peer text-body-lg resize-none" id="message" name="message" placeholder=" " rows="4"></textarea>
+<label class="absolute left-0 top-4 text-outline font-label-caps text-label-caps transition-all pointer-events-none origin-left" for="message">メッセージ内容</label>
+</div>
+<button class="w-full md:w-auto bg-deep-navy text-ice-white px-16 py-5 font-label-caps text-label-caps tracking-widest hover:opacity-90 transition-all uppercase" type="submit">
+                            送信する
+                        </button>
+</form>
+</div>
+<!-- Right: Corporate Info -->
+<aside class="md:col-span-5 space-y-12">
+<div class="bg-ice-white border border-platinum-divider p-8 md:p-12 space-y-8">
+<div>
+<span class="text-metallic-gold font-label-caps text-label-caps block mb-2">CORPORATE OVERVIEW</span>
+<h2 class="font-headline-md text-headline-md mb-6">会社概要</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                                卓越した都市開発と不動産コンサルティング。私たちは、未来の都市景観を形作るパートナーです。
+                            </p>
+</div>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-metallic-gold pt-1">location_on</span>
+<div>
+<p class="font-label-caps text-label-caps text-outline mb-1">LOCATION</p>
+<p class="font-body-md text-body-md">東京都千代田区大手町 1-2-1<br/>大手町ビルディング 45F</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-metallic-gold pt-1">call</span>
+<div>
+<p class="font-label-caps text-label-caps text-outline mb-1">PHONE</p>
+<p class="font-body-md text-body-md">03-XXXX-XXXX</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-metallic-gold pt-1">mail</span>
+<div>
+<p class="font-label-caps text-label-caps text-outline mb-1">EMAIL</p>
+<p class="font-body-md text-body-md">info@urban-ps.co.jp</p>
+</div>
+</div>
+</div>
+<!-- Map Integration Placeholder -->
+<div class="w-full aspect-square md:aspect-video grayscale contrast-125 border border-platinum-divider relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A minimalist, stylized monochromatic map illustration of a high-end Tokyo business district. The map uses a palette of ice-white backgrounds with platinum-divider lines for streets and deep-navy blocks for buildings. A single metallic-gold pin marks the central location, exuding a sense of exclusive, high-precision urban placement." data-location="Otemachi, Tokyo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbygqIJ_2KmEd8s-CXHnBaT3Z6ReWah_uJFAyxRxuJG7scVGnn7sSq2P2Euwb5Dwa0cK1lJRvpttJppwMyNoYdEK3r63vwCkPKgCaXicwfYQ_cPh0uukZbbtc-FBbn_M4PTn2q354YsEemgYa_fQaP-bPtxfVHH170Kb2rCBwl9SZBj4rmwN0X9F6oUiSirf8VhqyoAmA_G7yMDlTcF3ZW_IWQ079qGS78ceNstXR98q5_ZOkdsB6sp_lo8t0_pWKAOg4XAJcOuQM"/>
+<div class="absolute inset-0 bg-deep-navy/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="bg-ice-white text-deep-navy font-label-caps text-label-caps px-4 py-2">GOOGLE MAPSで見る</span>
+</div>
+</div>
+</div>
+<!-- Building Photo for Trust -->
+<div class="relative overflow-hidden">
+<img class="w-full h-72 object-cover" data-alt="A low-angle vertical shot of a prestigious skyscraper's entrance in a world-class financial district. The architecture features polished dark stone and expansive glass panels reflecting the surrounding luxury landscape. The scene is shot in high-contrast light-mode style, emphasizing the clean lines and sophisticated presence of a major corporate headquarters." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNoUfkXXIOSQmPSL83MUGNFYGctWD1VmOBbRHEkqCBrrEi8Qqt67PgI04n2hyA0JCRTtr3pRTyd3gwuRtsY3q77cHRsQKxFPn9G1ytg8VYfA7087wyxaYdYS8CD_ccv2s6JFn0tAHeqHlkOx3uIBljoxX4KTTD9hvk38lbB3VOx0GfIRAH9__fzkIreJBSlMXCHxkTjFo2vjPtIqz8QfdPw6sFUv-jMhnOC8a8tn5rpnpa-u4fEwmelV6QDDTsop2HH8YB1eeCDE0"/>
+<div class="absolute bottom-0 left-0 bg-deep-navy text-ice-white px-6 py-4">
+<p class="font-label-caps text-label-caps tracking-widest">HEADQUARTERS</p>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<!-- Consultant CTA Section -->
+<section class="bg-deep-navy py-section-gap" id="consultant">
+<div class="max-w-[1280px] mx-auto px-margin-mobile flex flex-col md:flex-row items-center gap-gutter">
+<div class="md:w-1/2">
+<span class="text-metallic-gold font-label-caps text-label-caps block mb-4 uppercase">Direct Consultation</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-ice-white mb-8">専門家による<br/>個別相談</h2>
+<p class="font-body-lg text-body-lg text-ice-white/70 mb-10">
+                        私たちのコンサルタントが、お客様のご要望に合わせて最適なポートフォリオをご提案いたします。一歩踏み出した先に、最上の都市体験が待っています。
+                    </p>
+<button class="bg-metallic-gold text-deep-navy px-16 py-6 font-label-caps text-label-caps tracking-widest hover:scale-105 transition-transform uppercase font-bold">
+                        コンサルタントに相談する
+                    </button>
+</div>
+<div class="md:w-1/2 grid grid-cols-2 gap-4">
+<img class="w-full h-80 object-cover grayscale" data-alt="A close-up, high-key photograph of two professional experts in tailored suits shaking hands in a minimalist glass-walled boardroom. The environment is flooded with soft natural light, highlighting a clean, architectural aesthetic. The mood is one of mutual trust and professional commitment, using a palette of whites, light grays, and deep navy accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwXEk40QAFdRbQyI_PZrdDAqawIpZLdKx8uXcgMcqVNi7PkdbmWRDNx0371o9olFL7zAwk06gGtWx755pe8fUlL65EwkjQ9gWatpkLwSDCWdkNBdvE72w3eTYQZKyM6AuCRMgnyoa4uSyUfWgQldl2lud-tHyEvwluUSlWNiN45fJl1nw8SREIGx5uwgs90NBaaHGpFq4M3cqKWdJybAzzkoDaPpb1MzfJsByJEkjKwaw7T6rzgyjjfiYhaLCc3wlzSMYG32FCp-g"/>
+<img class="w-full h-80 object-cover mt-12 grayscale" data-alt="An interior view of a contemporary luxury office space with panoramic windows overlooking a sprawling city. The furniture is minimalist and elegant, reflecting an exclusive corporate atmosphere. The lighting is bright and airy, creating a sense of clarity and modern prestige in a high-end consultancy setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD47qX7GHOubohF3pgEES7E9Ux87lUCHkaer1MF5yoYdMVtXvMg9PAblR7ujG02tZdAU_Y8T2e49yakdYfs6PQjSRe2-61x19ZxDJOs0ml924RUAGJWirwZMmeRbgVm8F-n1PBv1dvvxNETQfK85of1FJ9vdcJSjszjUHMJMI6EPSdGbtBmVBkzwFFxdumoxXsIh502AJFiIpToWHCnFJWiHvSGNZmego2Fg-9kcz8e9wAlECURTmkaKrvSU5PakkD85bqsy1qi090"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-deep-navy dark:bg-primary-container flex flex-col items-center py-12 px-margin-mobile text-center space-y-stack-unit">
+<div class="font-headline-md text-headline-md text-ice-white tracking-widest mb-4 uppercase">Urban Property Solutions</div>
+<div class="flex flex-wrap justify-center gap-6 mb-8">
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-ice-white transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-ice-white transition-colors" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-tertiary-container hover:text-ice-white transition-colors" href="#">Cookie Policy</a>
+</div>
+<p class="font-label-caps text-label-caps text-on-tertiary-container opacity-60">© 2024 URBAN PROPERTY SOLUTIONS. ALL RIGHTS RESERVED.</p>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-safe h-16 bg-ice-white dark:bg-deep-navy border-t border-platinum-divider dark:border-charcoal-muted z-50">
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant pt-2 hover:text-metallic-gold transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-caps text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant pt-2 hover:text-metallic-gold transition-colors" href="#">
+<span class="material-symbols-outlined">business_center</span>
+<span class="font-label-caps text-[10px]">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant pt-2 hover:text-metallic-gold transition-colors" href="#">
+<span class="material-symbols-outlined">domain</span>
+<span class="font-label-caps text-[10px]">Properties</span>
+</a>
+<a class="flex flex-col items-center justify-center text-metallic-gold border-t-2 border-metallic-gold pt-2" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-caps text-[10px]">Contact</span>
+</a>
+</nav>
+<script>
+        // Simple Micro-interaction for inputs
+        const inputs = document.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('border-metallic-gold');
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.classList.remove('border-metallic-gold');
+            });
+        });
+
+        // TopAppBar transparency on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-sm', 'bg-opacity-95', 'backdrop-blur-md');
+            } else {
+                header.classList.remove('shadow-sm', 'bg-opacity-95', 'backdrop-blur-md');
+            }
+        });
+    </script>
+</body></html>

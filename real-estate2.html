@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Properties | Urban Property Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "on-tertiary": "#ffffff",
+                  "surface-bright": "#f9f9ff",
+                  "inverse-surface": "#263143",
+                  "on-tertiary-container": "#828489",
+                  "outline-variant": "#c6c6cd",
+                  "on-primary-fixed-variant": "#3f465c",
+                  "on-primary": "#ffffff",
+                  "on-secondary-fixed-variant": "#5b4312",
+                  "on-secondary": "#ffffff",
+                  "surface-variant": "#d8e3fb",
+                  "on-primary-container": "#7c839b",
+                  "surface-container-low": "#f0f3ff",
+                  "on-tertiary-fixed": "#191c20",
+                  "secondary-fixed": "#ffdea8",
+                  "on-background": "#111c2d",
+                  "primary": "#000000",
+                  "on-secondary-container": "#785d2a",
+                  "platinum-divider": "#e2e8f0",
+                  "surface-container-highest": "#d8e3fb",
+                  "tertiary": "#000000",
+                  "secondary-container": "#fdd89a",
+                  "on-primary-fixed": "#131b2e",
+                  "inverse-on-surface": "#ecf1ff",
+                  "primary-fixed-dim": "#bec6e0",
+                  "secondary-fixed-dim": "#e5c185",
+                  "tertiary-fixed-dim": "#c5c6cc",
+                  "surface-dim": "#cfdaf2",
+                  "tertiary-container": "#191c20",
+                  "error-container": "#ffdad6",
+                  "primary-fixed": "#dae2fd",
+                  "on-secondary-fixed": "#271900",
+                  "on-surface-variant": "#45464d",
+                  "charcoal-muted": "#334155",
+                  "inverse-primary": "#bec6e0",
+                  "surface-tint": "#565e74",
+                  "surface-container-high": "#dee8ff",
+                  "ice-white": "#f8f9ff",
+                  "metallic-gold": "#b4945c",
+                  "surface-container-lowest": "#ffffff",
+                  "primary-container": "#131b2e",
+                  "error": "#ba1a1a",
+                  "secondary": "#755a28",
+                  "surface": "#f9f9ff",
+                  "outline": "#76777d",
+                  "on-surface": "#111c2d",
+                  "on-error": "#ffffff",
+                  "deep-navy": "#0f172a",
+                  "tertiary-fixed": "#e1e2e8",
+                  "background": "#f9f9ff",
+                  "surface-container": "#e7eeff",
+                  "on-tertiary-fixed-variant": "#44474c",
+                  "on-error-container": "#93000a"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "spacing": {
+                  "margin-mobile": "1.5rem",
+                  "gutter": "2rem",
+                  "margin-page": "4rem",
+                  "section-gap": "8rem",
+                  "stack-unit": "0.5rem"
+          },
+          "fontFamily": {
+                  "body-lg": ["Inter"],
+                  "headline-lg": ["Montserrat"],
+                  "body-md": ["Inter"],
+                  "headline-md": ["Montserrat"],
+                  "headline-lg-mobile": ["Montserrat"],
+                  "label-caps": ["Inter"]
+          },
+          "fontSize": {
+                  "body-lg": ["18px", {"lineHeight": "1.8", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                  "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                  "body-md": ["16px", {"lineHeight": "1.7", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                  "headline-md": ["24px", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                  "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                  "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.2em", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    body {
+      background-color: #f8f9ff; /* ice-white */
+      color: #0f172a; /* deep-navy */
+    }
+    .hover-gold-border {
+      transition: border-color 0.3s ease;
+    }
+    .hover-gold-border:hover {
+      border-color: #b4945c;
+    }
+    .property-card:hover img {
+      transform: scale(1.05);
+    }
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile h-16 w-full bg-ice-white dark:bg-deep-navy border-b border-platinum-divider dark:border-charcoal-muted transition-all duration-300 ease-in-out">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-metallic-gold">architecture</span>
+<h1 class="font-headline-md text-headline-md font-bold tracking-widest text-primary dark:text-ice-white uppercase">Urban Property Solutions</h1>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex gap-6">
+<a class="font-label-caps text-label-caps text-deep-navy dark:text-ice-white hover:opacity-70 transition-opacity" href="#">Home</a>
+<a class="font-label-caps text-label-caps text-deep-navy dark:text-ice-white hover:opacity-70 transition-opacity" href="#">Services</a>
+<a class="font-label-caps text-label-caps text-metallic-gold hover:opacity-70 transition-opacity" href="#">Properties</a>
+<a class="font-label-caps text-label-caps text-deep-navy dark:text-ice-white hover:opacity-70 transition-opacity" href="#">Contact</a>
+</nav>
+<button class="material-symbols-outlined text-deep-navy dark:text-ice-white hover:opacity-70 transition-opacity">menu</button>
+</div>
+<button class="md:hidden material-symbols-outlined text-deep-navy dark:text-ice-white">menu</button>
+</header>
+<main class="pt-24 pb-32 max-w-[1280px] mx-auto px-margin-mobile md:px-8">
+<!-- Hero Section / Title -->
+<section class="mb-16">
+<div class="flex flex-col md:flex-row justify-between items-end gap-8">
+<div class="max-w-2xl">
+<span class="font-label-caps text-label-caps text-metallic-gold mb-4 block">CURATED EXCLUSIVITY</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase mb-4">Properties</h2>
+<p class="text-on-surface-variant font-body-lg max-w-lg">Discover our handpicked selection of architectural masterpieces and luxury residences tailored for the sophisticated urban dweller.</p>
+</div>
+</div>
+</section>
+<!-- Filters Section -->
+<section class="mb-16 border-b border-platinum-divider pb-8">
+<div class="flex flex-wrap items-center gap-x-12 gap-y-6">
+<div class="flex flex-col gap-2 min-w-[200px]">
+<label class="font-label-caps text-label-caps text-on-surface-variant">AREA</label>
+<select class="bg-transparent border-0 border-b border-deep-navy py-2 focus:ring-0 focus:border-metallic-gold outline-none cursor-pointer">
+<option>All Locations</option>
+<option>Minato-ku, Tokyo</option>
+<option>Shibuya-ku, Tokyo</option>
+<option>Chuo-ku, Tokyo</option>
+<option>Yokohama Waterfront</option>
+</select>
+</div>
+<div class="flex flex-col gap-2 min-w-[200px]">
+<label class="font-label-caps text-label-caps text-on-surface-variant">PRICE RANGE</label>
+<select class="bg-transparent border-0 border-b border-deep-navy py-2 focus:ring-0 focus:border-metallic-gold outline-none cursor-pointer">
+<option>Any Price</option>
+<option>¥100M - ¥300M</option>
+<option>¥300M - ¥500M</option>
+<option>¥500M+</option>
+</select>
+</div>
+<div class="flex flex-col gap-2 min-w-[200px]">
+<label class="font-label-caps text-label-caps text-on-surface-variant">PROPERTY TYPE</label>
+<select class="bg-transparent border-0 border-b border-deep-navy py-2 focus:ring-0 focus:border-metallic-gold outline-none cursor-pointer">
+<option>All Types</option>
+<option>Penthouse</option>
+<option>Terrace House</option>
+<option>Modern Estate</option>
+</select>
+</div>
+<div class="flex-grow flex justify-end">
+<button class="font-label-caps text-label-caps text-deep-navy border border-deep-navy px-8 py-3 hover:bg-deep-navy hover:text-ice-white transition-all uppercase tracking-widest">
+            Search
+          </button>
+</div>
+</div>
+</section>
+<!-- Property Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Property Card 1 -->
+<article class="property-card group cursor-pointer">
+<div class="relative overflow-hidden aspect-[3/2] mb-6">
+<div class="absolute top-4 left-4 z-10">
+<span class="bg-metallic-gold text-deep-navy font-label-caps text-[10px] px-3 py-1 uppercase tracking-widest">Featured</span>
+</div>
+<img alt="Luxury Penthouse" class="w-full h-full object-cover transition-transform duration-700 ease-out" data-alt="A sprawling, high-end luxury penthouse interior with floor-to-ceiling windows overlooking a modern metropolitan skyline at sunset. The space features minimalist architectural lines, polished marble flooring, and exclusive designer furniture. The lighting is warm and cinematic, casting soft glows across the sophisticated monochrome color palette of whites, blacks, and subtle gold accents. The atmosphere is one of serene, high-status urban living." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0sXvg5N3msDhnkRTkIA8Eu18B3xnxJO4bW3ubQvQMevYo7lpUpbhC0j26qei2FaGVsBM0DhbqQ2VMoGXCdXrzcCQM14rCAV7WuD4bL6_tA8ODmpkxfa8r-oOcNfv2pQQ7atKjEOzYqaXHuiFz6skW0JNZaCwWX33CbqYug249TbzVcCzaYPQcGpMlInNHa15k-E-TvSFa3_VSTvSBOEkbT6JXcXYs9tzkLWqRz5lq1VaMasD_QRy0roEjO41Ox192wjE-4nYS61k"/>
+</div>
+<div class="space-y-3">
+<h3 class="font-headline-md text-headline-md uppercase tracking-wide group-hover:text-metallic-gold transition-colors">Skyline Sanctuary</h3>
+<p class="text-on-surface-variant font-label-caps tracking-widest">MINATO-KU, TOKYO</p>
+<div class="flex justify-between items-center border-t border-platinum-divider pt-4">
+<span class="font-headline-md text-metallic-gold">¥480,000,000</span>
+<div class="flex gap-4 text-outline font-label-caps">
+<span>240㎡</span>
+<span>3LDK</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Property Card 2 -->
+<article class="property-card group cursor-pointer">
+<div class="relative overflow-hidden aspect-[3/2] mb-6">
+<img alt="Modern Residence" class="w-full h-full object-cover transition-transform duration-700 ease-out" data-alt="The exterior view of a sharp, rectilinear modern architectural residence constructed from dark concrete and expansive glass panels. The building is surrounded by a perfectly manicured minimalist garden with a reflecting pool that mirrors the structure. The lighting is high-key daylight, emphasizing the clean edges and prestigious aesthetic of the design. The color palette is dominated by deep charcoal, ice-white, and the natural green of the landscape." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_9wtqSoP6l2D8pe4Qi06gsu_GAxHVd7q4oiJQ4r7WLTDZMujY_jUy8gY4g5LeyzL4JQ5keDkey02UYOVDUsOPSnMzbi--oHbLj6uv90vl9Ao9jbWFqZCDfYdXOwL7PMqD_dV14hqvhvJxcG316KT6lELOl0q872jgaRDPGHTTkD_2ch-MqQvoD5sktkqbnjqOcQlN2Vt7N4gGgbU3WE_vGDd9TQUYv6IdxgNAkX_DGAV8dNn2eQSrDSKfuad4PX8JXCw5UYAQ0o8"/>
+</div>
+<div class="space-y-3">
+<h3 class="font-headline-md text-headline-md uppercase tracking-wide group-hover:text-metallic-gold transition-colors">Monolith Estate</h3>
+<p class="text-on-surface-variant font-label-caps tracking-widest">SHIBUYA-KU, TOKYO</p>
+<div class="flex justify-between items-center border-t border-platinum-divider pt-4">
+<span class="font-headline-md text-metallic-gold">¥320,000,000</span>
+<div class="flex gap-4 text-outline font-label-caps">
+<span>185㎡</span>
+<span>2LDK</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Property Card 3 -->
+<article class="property-card group cursor-pointer">
+<div class="relative overflow-hidden aspect-[3/2] mb-6">
+<div class="absolute top-4 left-4 z-10">
+<span class="bg-metallic-gold text-deep-navy font-label-caps text-[10px] px-3 py-1 uppercase tracking-widest">Featured</span>
+</div>
+<img alt="Aged luxury kitchen" class="w-full h-full object-cover transition-transform duration-700 ease-out" data-alt="A professionally designed high-end gourmet kitchen featuring matte black cabinetry, a large white marble island with subtle grey veining, and integrated gold-toned fixtures. The space is illuminated by soft, recessed architectural lighting and morning light filtering through a large window. The aesthetic is extremely clean and organized, conveying a sense of calm and precision. The overall tone is luxurious and focused on high-quality materials." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_BcRjgVXtvqDRz00G2ZvQDIJYMNvAz_NU75hxG9KOBQUB_sPyuBZUZfCIOEYHq4zSyTNht_n14Lql1cRhDUEHKizZouhw1patbnP_FR88g4b2h_CVXBU1W9Lp4I9fRDvvBgkfGN7pYyoZSnezZYyssHlMSIgKeqHS-dgoo8s6o71RTjX1p6FW5omJ1VMmHoz32bYUwtI-oJHrkNwV_8utt45sDLzk7GHoIuOJ9k7USeoGqOeZThvJn5en4zlo5-KxKCbACXxYffc"/>
+</div>
+<div class="space-y-3">
+<h3 class="font-headline-md text-headline-md uppercase tracking-wide group-hover:text-metallic-gold transition-colors">The Marble Gallery</h3>
+<p class="text-on-surface-variant font-label-caps tracking-widest">AZABU-DAI, TOKYO</p>
+<div class="flex justify-between items-center border-t border-platinum-divider pt-4">
+<span class="font-headline-md text-metallic-gold">¥550,000,000</span>
+<div class="flex gap-4 text-outline font-label-caps">
+<span>310㎡</span>
+<span>4LDK</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Property Card 4 -->
+<article class="property-card group cursor-pointer">
+<div class="relative overflow-hidden aspect-[3/2] mb-6">
+<img alt="Waterfront terrace" class="w-full h-full object-cover transition-transform duration-700 ease-out" data-alt="An expansive open-air terrace of a luxury residence overlooking a calm harbor at dawn. The terrace features high-end outdoor furniture, glass railings that offer unobstructed views, and a minimalist stone floor. The sky is a soft gradient of blue and pale gold. The mood is peaceful, exclusive, and breathtakingly spacious. The photography is professional and editorial, with a sharp focus on the architectural details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0O5iQlgaUz7fCchmbxPpDqvM-lSMDIjRyFEDyuMvnQkhAB77C7xdOFSpOJbmsBvpEbvdI0244wfq1Sk2nQ9XzG7EIfsdWoj6aGRfNNh05eANNhUdEhy_W6hxItJdknd3hSlepckZtcITQazgPOPSLHsrALAnnXQ9n6NIbGp0fPxxpi3ZngVlhgFotvjcGgZeMqTa7JUquCLgiiNjUpDNRKgLc8hzHc_HEoTNRWJwAK_ouVf_Kq0AqaUE8tJW_EqBM-XGxzGr5c6g"/>
+</div>
+<div class="space-y-3">
+<h3 class="font-headline-md text-headline-md uppercase tracking-wide group-hover:text-metallic-gold transition-colors">Harbor Vista</h3>
+<p class="text-on-surface-variant font-label-caps tracking-widest">YOKOHAMA WATERFRONT</p>
+<div class="flex justify-between items-center border-t border-platinum-divider pt-4">
+<span class="font-headline-md text-metallic-gold">¥280,000,000</span>
+<div class="flex gap-4 text-outline font-label-caps">
+<span>160㎡</span>
+<span>2LDK</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Property Card 5 -->
+<article class="property-card group cursor-pointer">
+<div class="relative overflow-hidden aspect-[3/2] mb-6">
+<img alt="Library study" class="w-full h-full object-cover transition-transform duration-700 ease-out" data-alt="A private home office or library in a high-end luxury home, featuring tall custom dark wood shelving, a minimalist black desk, and a large window looking onto a serene private courtyard. The lighting is focused and atmospheric, provided by a modern gold desk lamp and soft natural light. The aesthetic is one of scholarly prestige and quiet luxury, using a palette of deep navy, rich browns, and metallic gold." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFidecOh9G6bVc5CFucOZ6zC7MXSzZuC44q_dLNEl_sP6DXJ0mG3YcQjFw8rCkIg1kCDDpbk-9kGJSRBrsb8jn1CnT6OehBq8sV5mb56IV6nece0snZe1VeZEUKc33San2YRa5c9pDuRmFQ0UeYnzEuoehG5K8FD_dHTdpg3ATinUrdv9CYKhZ-i7zjREDRuDFe5ZIx_gJNo4PTWIKzzq_q0OrRJU3hGE_hF1LB3OBuekLQaMOm93Z0Ltie3wOiVuaF6Mh2GsIUNU"/>
+</div>
+<div class="space-y-3">
+<h3 class="font-headline-md text-headline-md uppercase tracking-wide group-hover:text-metallic-gold transition-colors">The Atelier</h3>
+<p class="text-on-surface-variant font-label-caps tracking-widest">DAIKANYAMA, TOKYO</p>
+<div class="flex justify-between items-center border-t border-platinum-divider pt-4">
+<span class="font-headline-md text-metallic-gold">¥190,000,000</span>
+<div class="flex gap-4 text-outline font-label-caps">
+<span>120㎡</span>
+<span>1LDK</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Property Card 6 -->
+<article class="property-card group cursor-pointer">
+<div class="relative overflow-hidden aspect-[3/2] mb-6">
+<div class="absolute top-4 left-4 z-10">
+<span class="bg-metallic-gold text-deep-navy font-label-caps text-[10px] px-3 py-1 uppercase tracking-widest">Featured</span>
+</div>
+<img alt="Master Bedroom" class="w-full h-full object-cover transition-transform duration-700 ease-out" data-alt="A spacious and airy master bedroom in a luxury estate, featuring neutral tones, high-quality linen bedding, and large windows that invite the morning sun. The floor is made of light-colored wide-plank wood. The design is minimalist yet warm, with subtle textures of wool and silk. The lighting is soft and diffused, creating a serene sanctuary. The color scheme is a sophisticated blend of ice-white, cream, and soft grey accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvooo2VQ5xWw8cqNfs0hMpjrQnhoxxWyGaQZFfi_KCrScZN5xyNu57uJGGWc-aKGMig0G-opo-t3L1RtsH2_a-_oxc2srriJB0r2kMTYDfd796Hw_Kd0wQdK0y0pbanEXwevB4Xt1jmi8NZrBoiDX1gt03RxxVbjmR3Qlke0d8P-U8vFnw6N0aIbbUQ9SIMBcXHXi0dnlTgnbKz8xkgqZDCOltAZwnuqyCgxzM4jiPEXcZAEuJzmw2sATdfmnk7Iy3zswsHVPgRBs"/>
+</div>
+<div class="space-y-3">
+<h3 class="font-headline-md text-headline-md uppercase tracking-wide group-hover:text-metallic-gold transition-colors">Zenith Suite</h3>
+<p class="text-on-surface-variant font-label-caps tracking-widest">SHIROKANE, TOKYO</p>
+<div class="flex justify-between items-center border-t border-platinum-divider pt-4">
+<span class="font-headline-md text-metallic-gold">¥410,000,000</span>
+<div class="flex gap-4 text-outline font-label-caps">
+<span>210㎡</span>
+<span>3LDK</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination / More Button -->
+<div class="mt-24 flex justify-center">
+<button class="bg-deep-navy text-ice-white font-label-caps text-label-caps px-12 py-5 uppercase tracking-[0.3em] hover:bg-metallic-gold transition-colors duration-300">
+        Discover More Properties
+      </button>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-safe h-16 bg-ice-white dark:bg-deep-navy border-t border-platinum-divider dark:border-charcoal-muted z-50">
+<div class="flex flex-col items-center justify-center text-outline dark:text-outline-variant pt-2 hover:text-metallic-gold transition-colors">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-caps text-[10px]">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-outline dark:text-outline-variant pt-2 hover:text-metallic-gold transition-colors">
+<span class="material-symbols-outlined">business_center</span>
+<span class="font-label-caps text-[10px]">Services</span>
+</div>
+<div class="flex flex-col items-center justify-center text-metallic-gold border-t-2 border-metallic-gold pt-2">
+<span class="material-symbols-outlined">domain</span>
+<span class="font-label-caps text-[10px]">Properties</span>
+</div>
+<div class="flex flex-col items-center justify-center text-outline dark:text-outline-variant pt-2 hover:text-metallic-gold transition-colors">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-caps text-[10px]">Contact</span>
+</div>
+</nav>
+<!-- Footer -->
+<footer class="w-full flex flex-col items-center py-12 px-margin-mobile text-center space-y-stack-unit bg-deep-navy dark:bg-primary-container text-ice-white dark:text-surface-bright">
+<div class="font-headline-md text-headline-md text-ice-white tracking-widest uppercase mb-4">Urban Property Solutions</div>
+<p class="font-body-md text-body-md mb-8 max-w-lg opacity-80">Redefining luxury through architectural excellence and unparalleled market insight.</p>
+<div class="flex flex-wrap justify-center gap-8 mb-12">
+<a class="text-on-tertiary-container hover:text-ice-white transition-colors font-label-caps text-label-caps" href="#">Privacy Policy</a>
+<a class="text-on-tertiary-container hover:text-ice-white transition-colors font-label-caps text-label-caps" href="#">Terms of Service</a>
+<a class="text-on-tertiary-container hover:text-ice-white transition-colors font-label-caps text-label-caps" href="#">Cookie Policy</a>
+</div>
+<div class="font-label-caps text-label-caps opacity-60">
+      © 2024 URBAN PROPERTY SOLUTIONS. ALL RIGHTS RESERVED.
+    </div>
+</footer>
+<script>
+    // Micro-interactions and simple state handling
+    document.querySelectorAll('.property-card').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.querySelector('img').style.transform = 'scale(1.05)';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.querySelector('img').style.transform = 'scale(1.0)';
+      });
+    });
+
+    // Handle sticky header scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 20) {
+        header.classList.add('shadow-sm');
+        header.classList.remove('border-transparent');
+      } else {
+        header.classList.remove('shadow-sm');
+      }
+    });
+  </script>
+</body></html>
